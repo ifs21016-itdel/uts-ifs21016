@@ -1,0 +1,182 @@
+<resources>
+    <string name="app_name">Dino Pedia</string>
+
+    <string name="dinos_name">Dinosaurs Name</string>
+    <string name="description">Description</string>
+    <string name="nim">ifs21016</string>
+    <string name="my_name">Putri Ayu Manurung</string>
+    <string name="about_me">About Me</string>
+    <string name="main_page">Main Page</string>
+
+    <string-array name="data_name">
+        <item>Allosaurus</item>
+        <item>Diplodocus</item>
+        <item>Muttaburrasaurus</item>
+        <item>Pachycephalosaurus</item>
+        <item>Parasaurolophus</item>
+        <item>Pentaceratops</item>
+        <item>Stegosaurus</item>
+        <item>Tyrannosaurus Rex</item>
+        <item>Triceratops</item>
+        <item>Velociraptor</item>
+    </string-array>
+
+    <string-array name="data_desc_detail">
+        <item>Allosaurus adalah dinosaurus karnivora besar yang hidup pada periode Jura. Mereka memiliki rahang yang kuat dengan gigi-gigi tajam, serta lengan depan yang kuat untuk menyerang mangsanya.
+        \n\nAllosaurus merupakan predator utama di habitatnya, dengan panjang tubuh mencapai sekitar 9 meter dan berat sekitar 2 ton. Mereka sering memburu dalam kelompok kecil dan memiliki kemampuan berlari yang cepat.</item>
+        <item> Diplodocus adalah dinosaurus herbivora raksasa dengan leher yang panjang dan ekor yang lebih panjang lagi. Mereka hidup pada periode Jura dan memiliki tubuh yang besar namun tubuh yang ramping.
+        \n\nDikenal sebagai salah satu dinosaurus terpanjang yang pernah hidup, Diplodocus dapat mencapai panjang sekitar 27 meter dan memiliki berat sekitar 12 ton. Mereka memiliki gigi-gigi kecil yang digunakan untuk merobek tanaman dan tumbuhan tinggi.</item>
+        <item>Muttaburrasaurus is a genus of herbivorous ornithopod notable for its flat skull and blunt snout. It can grow up to 9m in length and almost three tonnes in weight.
+        \n\nMuttaburrasaurus lived during the Early Cretaceous period, around 100-110m years ago, travelling long distances across Australia in search of forest areas that could provide the vegetation they needed. It lived alongside many herbivores as well as the predator Australovenator, which may have preyed on Muttaburrasaurus.</item>
+        <item>Pachycephalosaurus is an herbivorous dinosaur that lived in North America during the Late Cretaceous period, The name Pachycephalosaurus translates to ‘thick-headed lizard’, in reference to the genus’ large, thick skull that experts believe was used in intra-species combat, with rival dinosaurs attacking each other when competing for territory. Growing up to 4.5m in length and weighing almost half a ton, Pachycephalosaurus is one of the largest pachycephalosaurid dinosaurs.
+        \n\nThis genus lived around 65-75m years ago in the western United States, co-existing with many other dinosaurs including Edmontosaurus, Triceratops and the fearsome apex predator Tyrannosaurus. It is believed that Pachycephalosaurus lived in wooded areas, feeding on soft plants, fruit and seeds.</item>
+        <item>Parasaurolophus is an herbivorous hadrosaurid native to North America, and is famed for its unique head crest. Parasaurolophus grows up to around 7.5m in length
+        \n\nThe remains of Parasaurolophus have been found across the western United States, Canada and even as far away as Asia. The genus dates back around 75m years to the Late Cretaceous period, when the climate was seasonal but warm, and lived along rivers and near floodplains and swamps, alongside other dinosaurs including Centrosaurus, Styracosaurus and Euoplocephalus.</item>
+        <item>Pentaceratops is a relative of the more famous Triceratops, This genus can grow up to 7m in length and weighs in excess of five tonnes.Pentaceratops existed during the Late Cretaceous period, around 75m years ago and lived on the vast plains of the western United States, feeding mainly on plants and shrubs. It lived alongside numerous other dinosaurs including Parasaurolophus and Edmontosaurus, and is unlikely to have had any predators once fully grown due to its large size.</item>
+        <item>Stegosaurus is one of the most famous dinosaurs ever to have existed,thanks to the distinctive upright plates and spikes that adorn its back and tail.
+        The bony plates along its back were embedded in the skin of the animal, not attached to its skeleton, which is why in most fossil finds the plates are separated from the body.
+            \n\nWhen O C Marsh described the first fossil of a Stegosaurus, he concluded that the plates would have lain flat on its back. After finding a specimen that had been covered with mud, which had held the plates in place, Marsh realised that they stood vertically, alternately on either side of the spine.
+            \n\nScientists are not exactly sure what the plates were used for. They may have warned off predators, or allowed members of the same species to recognise each other. Another suggestion is that the plates were used to regulate body temperature.</item>
+        <item>The most famous of all dinosaurs, Tyrannosaurus rex enjoys a fearsome reputation around the world thanks to its size, power and aggression.
+        \n\nTyrannosaurus lives up to its reputation as one of the most fearsome animals of all time. Its powerful jaws had 60 teeth, each one up to 20cm (8 inches) long and its bite was around 3 times as powerful than that of a lion.
+            \n\nBite marks found on Triceratops and Edmontosaurus fossil bones show that Tyrannosaurus could crunch through bone. Analysis of fossilised Tyrannosaurus dung show that it contained the bones of its prey.</item>
+        <item>Pentaceratops adalah dinosaurus herbivora yang memiliki lima tonjolan pada tengkoraknya, termasuk tanduk besar di atas hidungnya. Mereka hidup pada periode Kapur dan merupakan anggota keluarga Triceratops.
+        \n\n Dengan panjang sekitar 12 meter dan berat sekitar 8 ton, T-Rex memiliki kemampuan berlari yang cepat dan kekuatan gigitan yang luar biasa. Mereka diperkirakan memburu secara mandiri atau dalam kelompok kecil.</item>
+        <item>Triceratops adalah dinosaurus herbivora yang memiliki tiga tanduk besar pada tengkoraknya, serta lempeng-kepala di bagian belakang.
+        \n\nDengan panjang sekitar 9 meter dan berat sekitar 6 ton, Triceratops menggunakan tanduknya untuk melindungi diri dari predator dan mungkin juga dalam kompetisi antar-sesama untuk pasangan.</item>
+        <item>Velociraptor adalah dinosaurus karnivora berukuran sedang yang hidup pada periode Kapur. Mereka memiliki tubuh ramping dengan cakar yang besar dan tajam di kaki belakangnya.
+        \n\nDengan panjang sekitar 2 meter dan berat sekitar 15 kilogram, Velociraptor adalah predator yang lincah dan cerdik. Mereka biasanya berburu dalam kelompok kecil dan menggunakan kecepatan serta kelincahan untuk menyerang mangsa mereka.</item>
+    </string-array>
+
+    <string-array name="karakteristik">
+        <item> Karnivora besar</item>
+        <item>Herbivora raksasa</item>
+        <item>Kepala besar</item>
+        <item>Tengkorak tebal</item>
+        <item>Crests besar</item>
+        <item>Tengkorak tanduk</item>
+        <item>Plat dorsal</item>
+        <item>Karnivora raksasa</item>
+        <item> Tengkorak bertanduk</item>
+        <item>Predator cepat</item>
+    </string-array>
+
+    <string-array name="kelompok">
+        <item>Large theropod</item>
+        <item>Sauropod</item>
+        <item>Large ornithopod</item>
+        <item>Pachycephalosaur</item>
+        <item>Large ornithopod</item>
+        <item>Ceratopsian</item>
+        <item>Stegosauridae</item>
+        <item>Large theropod</item>
+        <item>Ceratopsian</item>
+        <item>Small theropod</item>
+    </string-array>
+
+    <string-array name="habitat">
+        <item>Hutan rimba lebat</item>
+        <item>Daerah dataran terbuka</item>
+        <item>Padang rumput luas</item>
+        <item>Hutan rawa-rawa</item>
+        <item>Daerah sungai berawa</item>
+        <item>Padang rumput berbukit</item>
+        <item>Hutan pedalaman lembab</item>
+        <item>Padang rumput besar</item>
+        <item>Savana bersemi gersang</item>
+        <item>Gurun berbatu terjal</item>
+    </string-array>
+
+    <string-array name="makanan">
+        <item> Dinosaurus kecil, Ikan</item>
+        <item>Tanaman, Foliage rendah</item>
+        <item>Tumbuhan rendah, Fungi</item>
+        <item>Tanaman, Buah-buahan</item>
+        <item>Tanaman, Daun, Pucuk</item>
+        <item>Vegetasi rendah, Paku</item>
+        <item>Tumbuhan, Lumut, Kecambah</item>
+        <item>Dinosaurus besar, Karnivora</item>
+        <item>Tumbuhan berduri, Daun, Akar</item>
+        <item> Dinosaurus kecil, Reptil kecil</item>
+    </string-array>
+
+    <string-array name="kelemahan">
+        <item>Tubuh besar, Pergerakan lambat</item>
+        <item>Rentan terhadap predator, Kurang lincah</item>
+        <item>Rentan terhadap serangan, Tubuh besar</item>
+        <item>Kepala rapuh, Pergerakan lambat</item>
+        <item>Pergerakan lambat, Kurang agresif</item>
+        <item>Terlalu besar, Lambat bergerak</item>
+        <item>Perlindungan terbatas, Pergerakan lambat</item>
+        <item>Terganggu oleh ukuran, Rentan terhadap cedera</item>
+        <item>Gerakan lambat, Rentan terhadap serangan samping</item>
+        <item>Gerakan lambat, Rentan terhadap serangan samping</item>
+    </string-array>
+
+    <string-array name="data_weight">
+        <item>2000kg</item>
+        <item>15000kg</item>
+        <item>3100kg</item>
+        <item>3000kg</item>
+        <item>3500kg</item>
+        <item>5000kg</item>
+        <item>3.500kg</item>
+        <item>7000kg</item>
+        <item>5500kg</item>
+        <item>15kg</item>
+    </string-array>
+
+    <string-array name="data_height">
+        <item>3.8m</item>
+        <item>4m</item>
+        <item>3m</item>
+        <item>2.5m</item>
+        <item>2.5m</item>
+        <item>5.2m</item>
+        <item>5m</item>
+        <item>5m</item>
+        <item>3.7m</item>
+        <item>0.9m</item>
+    </string-array>
+
+    <string-array name="data_length">
+        <item>12m</item>
+        <item>24m</item>
+        <item>8.7m</item>
+        <item>8m</item>
+        <item>11m</item>
+        <item>6.8m</item>
+        <item>10m</item>
+        <item>12m</item>
+        <item>9m</item>
+        <item>1.8m</item>
+    </string-array>
+
+
+    <string-array name="data_desc_list">
+        <item> Pemangsa raksasa bertaring tajam</item>
+        <item>Raksasa berleher panjang bergelantungan</item>
+        <item>Dinosaurus herbivora bermahkota tanduk</item>
+        <item>Dinosaurus berkepala tebal bersenjata</item>
+        <item>Dinosaurus berjengger dengan tanduk panjang</item>
+        <item>Dinosaurus bercula lima bertanduk besar</item>
+        <item>Dinosaurus berduri dengan pelat belakang</item>
+        <item>Raja pemangsa berkepala besar</item>
+        <item>Dinosaurus bertanduk tiga penguasa padang</item>
+        <item>Pemburu cerdas berbulu burung</item>
+    </string-array>
+
+    <integer-array name="data_img">
+        <item>@drawable/allosaurus_1</item>
+        <item>@drawable/diplodocus_1</item>
+        <item>@drawable/muttaburasaurus_1</item>
+        <item>@drawable/pachy_1</item>
+        <item>@drawable/parasaurolopus_1</item>
+        <item>@drawable/pentaceratops</item>
+        <item>@drawable/stego_11</item>
+        <item>@drawable/trex</item>
+        <item>@drawable/triceratops</item>
+        <item>@drawable/velociraptor</item>
+        <item>@drawable/sebelas</item>
+    </integer-array>
+</resources>
