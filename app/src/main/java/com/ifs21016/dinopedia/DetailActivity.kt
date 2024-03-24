@@ -1,84 +1,81 @@
 package com.ifs21016.dinopedia
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
-import android.widget.ImageView
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import com.ifs21016.dinopedia.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
-
-    companion object {
-        const val EXTRA_DINO = "extra_dino"
-    }
+    private lateinit var binding: ActivityDetailBinding
+    private var family: Family? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail)
+        binding = ActivityDetailBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val tvDetailName: TextView = findViewById(R.id.tv_detail_name)
-        val tvDetailDesc:TextView = findViewById(R.id.tv_detail_description)
-        val imgDetail:ImageView = findViewById(R.id.img_detail)
-        val tvDataYear: TextView = findViewById(R.id.tv_data_year)
-        val tvDataEra: TextView = findViewById(R.id.tv_data_era)
-        val tvDataDiet: TextView = findViewById(R.id.tv_data_diet)
-        val tvDataType: TextView = findViewById(R.id.tv_data_type)
-        val tvDataRegion: TextView = findViewById(R.id.tv_data_region)
-        val tvDataWeight: TextView = findViewById(R.id.tv_data_weight)
-        val tvDataHeight: TextView = findViewById(R.id.tv_data_height)
-        val tvDataLength: TextView = findViewById(R.id.tv_data_length)
-        //val shareButton: MenuItem = findViewById(R.id.action_share)
-
-        val dino = intent.getParcelableExtra<Dino>(EXTRA_DINO)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
-        tvDetailName.text = dino?.name ?: "No Name"
-        tvDetailDesc.text = dino?.descDetail
-        tvDataYear.text = ":${dino?.year}"
-        tvDataEra.text = ": ${dino?.era}"
-        tvDataDiet.text = ": ${dino?.diet}"
-        tvDataType.text = ": ${dino?.type}"
-        tvDataRegion.text = ": ${dino?.region}"
-        tvDataWeight.text = ": ${dino?.weight}"
-        tvDataHeight.text = ": ${dino?.height}"
-        tvDataLength.text = ": ${dino?.lenght}"
+        family = intent.getParcelableExtra(EXTRA_FAMILY)
 
-        if (dino != null) {
-            imgDetail.setImageResource(dino.img)
+        if (family != null) {
+            supportActionBar?.title = "Family ${family!!.name}"
+            loadData(family!!)
+        } else {
+            finish()
         }
 
-//        shareButton.setOnClickListener{
-//            val shareData = tvDetailName
-//            Toast.makeText(this, "Sharing data of ${shareData}", Toast.LENGTH_SHORT).show()
-//        }
-
-
+        binding.button33.setOnClickListener{
+            val intentWithData = Intent(this@DetailActivity, DinoActivity::class.java)
+            intentWithData.putExtra(DinoActivity.EXTRA_FAMILY, family!!)
+            startActivity(intentWithData)
+        }
     }
 
+    private fun loadData(family: Family) {
+        binding.ivDetailIcon.setImageResource(family.icon)
+        binding.tvDetailName.text = family.name
+        binding.tvDetailDescription.text = family.descrip
+        binding.tvDetailKel.text = family.period
+        binding.tvDetailChar.text = family.char
+        binding.tvDetailHabitat.text = family.habitat
+        binding.tvDetailPerilaku.text = family.perilaku
+        binding.tvDetailClassi.text = family.classi
+    }
+
+
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.menu, menu)
+        menuInflater.inflate(R.menu.menu_detail, menu)
         return true
     }
 
-
-
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.action_share -> {
-                val shareData = intent.getParcelableExtra<Dino>(EXTRA_DINO)
-                val shareIntent = Intent(Intent.ACTION_SEND)
-                shareIntent.type = "text/plain"
-                shareIntent.putExtra(Intent.EXTRA_TEXT, "Sharing dino data of ${ shareData?.name?.uppercase() }")
-                startActivity(Intent.createChooser(shareIntent, "Share Via"))
+            R.id.action_button -> {
+                shareAnimalDetails() // Panggil method untuk membagikan detail hewan
+                true
+            }
+            android.R.id.home -> {
+                finish() // Handle tombol kembali di action bar
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
 
+    private fun shareAnimalDetails() {
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.type = "text/plain"
+        val shareMessage = "Check out this animal: ${family?.name}\nDescription: ${family?.descrip}" // Isi pesan yang akan dibagikan
+        shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage)
+        startActivity(Intent.createChooser(shareIntent, "Share Animal Details"))
+    }
+
+    companion object {
+        const val EXTRA_FAMILY = "extra_family"
     }
 }

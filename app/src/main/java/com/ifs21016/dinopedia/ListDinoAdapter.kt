@@ -1,57 +1,51 @@
 package com.ifs21016.dinopedia
 
+import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.ifs21016.dinopedia.databinding.ItemRowFamilyBinding
 
-class ListDinoAdapter(private val listDino: ArrayList<Dino>) : RecyclerView.Adapter<ListDinoAdapter.ListViewHolder>() {
+class ListDinoAdapter(private val listDino: List<Dino>) :
+    RecyclerView.Adapter<ListDinoAdapter.ListViewHolder>() {
 
     private lateinit var onItemClickCallback: OnItemClickCallback
 
-    // BUAT APA?
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
     }
 
-
-    // ngasih template item_row_dino
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_row_dino, parent, false)
-        return ListViewHolder(view)
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ListViewHolder {
+        val binding = ItemRowFamilyBinding.inflate(
+            LayoutInflater.from(viewGroup.context),
+            viewGroup, false
+        )
+        return ListViewHolder(binding)
     }
 
-
-    // memasang data dari listDino ke holder(tampilan pada tiap row dari view)
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val (name, desc) = listDino[position]
-        val img = listDino[position].img
-        holder.imgPhoto.setImageResource(img)
-        holder.tvName.text = name
-        holder.tvDescription.text = desc
-        holder.itemView.setOnClickListener{
-            onItemClickCallback.onItemClicked(listDino[holder.adapterPosition])
+        try {
+            val dino = listDino[position]
+            holder.binding.ivItemFruit.setImageResource(dino.icon)
+            holder.binding.tvItemFruit.text = dino.name
+            holder.binding.textView2.text = dino.familyName
+
+            holder.itemView.setOnClickListener {
+                onItemClickCallback.onItemClicked(dino)
+            }
+        } catch (e: Exception) {
+            // Menampilkan pesan kesalahan
+            Log.e("ListDinoAdapter", "Error in onBindViewHolder: ${e.message}")
         }
     }
 
+
     override fun getItemCount(): Int = listDino.size
 
+    class ListViewHolder(var binding: ItemRowFamilyBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
-
-    // class yang digunakan untuk menampung slot tampilan data pada item_row_dino
-    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
-        val tvName: TextView = itemView.findViewById(R.id.tv_item_name)
-        val tvDescription: TextView = itemView.findViewById(R.id.tv_item_description)
-    }
-
-    // INI BUAT APA? MASIH GATAU
     interface OnItemClickCallback {
         fun onItemClicked(data: Dino)
     }
-
-
 }
-
